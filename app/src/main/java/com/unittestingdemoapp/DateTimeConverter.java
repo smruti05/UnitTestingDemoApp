@@ -7,6 +7,7 @@ import java.util.Date;
 public class DateTimeConverter {
 
     public static String convertDateTime(Date date) {
+        if (date == null) return null;
         Calendar cal = Calendar.getInstance();
         cal.setTime(date);
         int day = cal.get(Calendar.DATE);

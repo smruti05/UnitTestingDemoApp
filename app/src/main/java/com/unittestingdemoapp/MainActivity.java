@@ -10,8 +10,9 @@ import java.text.DateFormat;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView tvCurrentTiemstamp, tvConvertedDateTime;
+    TextView tvCurrentTimeStamp, tvConvertedDateTime;
     Button btnConvertDateTime;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,12 +23,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showCurrentTimestamp() {
-        tvCurrentTiemstamp.setText(DateFormat.getDateTimeInstance().format(new Date()));
+        tvCurrentTimeStamp.setText(DateFormat.getDateTimeInstance().format(new Date()));
     }
 
     private void initViews() {
         btnConvertDateTime = (Button) findViewById(R.id.btnConvert);
-        tvCurrentTiemstamp = (TextView) findViewById(R.id.tvCurrentTimestamp);
+        tvCurrentTimeStamp = (TextView) findViewById(R.id.tvCurrentTimestamp);
         tvConvertedDateTime = (TextView) findViewById(R.id.tvConvertedDateTime);
     }
 
